@@ -5,7 +5,6 @@
 #              Primary usage for generating a grid dungeon game.
 
 
-import cv2
 import cv2 as cv
 import os
 import numpy as np
@@ -87,6 +86,7 @@ class PhotoToGrid:
                 # Default trim, for grid square analysis, process inner 60% of square to get rid of edge noise.
                 trim_start_x, trim_start_y = .20, .20
                 trim_end_x, trim_end_y = .80, .80
+
                 # Narrowed trims for wall detection, only process inner 10% of square to get rid of edge noise.
                 # Even x and y values mean that a wall is analyzed. Set wall check flag.
                 if ((x % 2) != 0) and ((y % 2) == 0):
@@ -96,6 +96,7 @@ class PhotoToGrid:
                 if (y % 2) != 0:
                     trim_start_y, trim_end_y = .45, .55
                     wall_check_toggle = 1
+
                 # Otherwise, it is a grid square analysis. Check for shape.
                 # Dimensions for analysis of each box.
                 start_rectangle = (int((self.one_box_width * trim_start_x)) + (self.width_traversal[x]),
@@ -110,6 +111,7 @@ class PhotoToGrid:
 
                 # Uncomment the below line to view the image.
                 # cv.imshow('Reversed', processed_image_portion)
+                # cv.waitKey(0)
 
                 if wall_check_toggle == 1:
                     grid_value = self.check_wall(processed_image_portion)
@@ -125,8 +127,6 @@ class PhotoToGrid:
                 #     print(line)
                 # print("")
 
-                # cv.waitKey(0)
-
         # Return the final grid.
         return self.grid
 
@@ -140,7 +140,7 @@ class PhotoToGrid:
         blur = cv.GaussianBlur(input_image, (11, 11), cv.BORDER_DEFAULT)
 
         # Thresholding to remove unmarked grid walls.
-        threshold, thresh = cv.threshold(blur, 70, 255, cv.THRESH_BINARY)
+        threshold, thresh = cv.threshold(blur, 100, 255, cv.THRESH_BINARY)
 
         # Mask for image processing. Must start at same size of the input image.
         black = np.zeros(input_image.shape[:2], dtype='uint8')
@@ -190,7 +190,7 @@ class PhotoToGrid:
         Returns an "*" if an asterisk is detected.
         """
         # Convert processed image portion to greyscale.
-        img_grey = cv.cvtColor(processed_image_portion, cv2.COLOR_BGR2GRAY)
+        img_grey = cv.cvtColor(processed_image_portion, cv.COLOR_BGR2GRAY)
 
         # Apply Canny edge detection.
         img_canny = cv.Canny(img_grey, 50, 100)
@@ -262,5 +262,5 @@ class PhotoToGrid:
             new_file.truncate()
 
 # Testing
-# p2g = PhotoToGrid('C:/Users/ffoxxttrott/PycharmProjects/OpenCV/test_grid_3.jpg', 60, 60)
+# p2g = PhotoToGrid('C:/Users/ffoxxttrott/PycharmProjects/OpenCV/test_shapes.jpg', 90, 90)
 # p2g.write_csv()
