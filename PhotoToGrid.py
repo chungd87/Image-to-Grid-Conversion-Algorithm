@@ -14,7 +14,8 @@ import csv
 class PhotoToGrid:
     def __init__(self, file_path, grid_dimension_x, grid_dimension_y):
         # Input image file.
-        self.file = file_path
+        self.system_path = os.getcwd()
+        self.file = str(self.system_path) + "\\" + str(file_path)
         self.input_not_gray = cv.imread(self.file)
         self.input = cv.cvtColor(self.input_not_gray, cv.COLOR_BGR2GRAY)
 
@@ -237,9 +238,9 @@ class PhotoToGrid:
         Create dictionary of the reference images for walls.
         Returns the dictionary.
         """
-        horizontal = os.path.join(os.path.dirname(__file__), 'horiz_ref.jpg')
+        horizontal = str(self.system_path) + "\\" + "horiz_ref.jpg"
         horizontal_ref = cv.imread(horizontal)
-        vertical = os.path.join(os.path.dirname(__file__), 'vert_ref.jpg')
+        vertical = str(self.system_path) + "\\" + "vert_ref.jpg"
         vertical_ref = cv.imread(vertical)
 
         dictionary = {'H': horizontal_ref, 'V': vertical_ref}
@@ -262,5 +263,5 @@ class PhotoToGrid:
             new_file.truncate()
 
 # Testing
-# p2g = PhotoToGrid('C:/Users/ffoxxttrott/PycharmProjects/OpenCV/test_shapes.jpg', 90, 90)
-# p2g.write_txt()
+p2g = PhotoToGrid('input_image.jpg', 90, 90)
+p2g.write_txt()
