@@ -1,7 +1,7 @@
 # Author: Danny Chung
 # Date: 4/23/2022
 # Description: Takes input of a drawn maze image, recognizing square, triangle, and asterisk shapes.
-#              Outputs a computer readable 2D grid in .csv format.
+#              Outputs a computer readable 2D grid in .txt format.
 #              Primary usage for generating a grid dungeon game.
 
 
@@ -246,21 +246,21 @@ class PhotoToGrid:
 
         return dictionary
 
-    def write_csv(self):
+    def write_txt(self):
         """
-        Creates a .csv file based off of self.final_grid, named "dungeon.csv".
+        Creates a .txt file based off of self.final_grid, named "dungeon.txt".
         """
-        with open("dungeon.csv", "w", newline=None) as new_file:
+        with open("dungeon.txt", "w", newline=None) as new_file:
             csv_writer = csv.writer(new_file, delimiter=",")
             for row in self.final_grid:
                 print(row)
                 csv_writer.writerow(row)
 
         # Get rid of last new line carriage return.
-        with open("dungeon.csv", "rb+") as new_file:
+        with open("dungeon.txt", "rb+") as new_file:
             new_file.seek(-3, os.SEEK_END)
             new_file.truncate()
 
 # Testing
 # p2g = PhotoToGrid('C:/Users/ffoxxttrott/PycharmProjects/OpenCV/test_shapes.jpg', 90, 90)
-# p2g.write_csv()
+# p2g.write_txt()
