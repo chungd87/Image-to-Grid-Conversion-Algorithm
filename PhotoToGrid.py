@@ -262,6 +262,7 @@ class PhotoToGrid:
             new_file.seek(-3, os.SEEK_END)
             new_file.truncate()
 
+
 # Testing
 p2g = PhotoToGrid('input_image.jpg', 90, 90)
 p2g.write_txt()
