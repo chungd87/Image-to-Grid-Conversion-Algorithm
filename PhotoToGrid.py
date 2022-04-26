@@ -9,7 +9,8 @@ import cv2 as cv
 import os
 import numpy as np
 import csv
-
+import time
+import sys
 
 class PhotoToGrid:
     def __init__(self, file_path, grid_dimension_x, grid_dimension_y):
@@ -127,7 +128,17 @@ class PhotoToGrid:
                 # for line in self.grid:
                 #     print(line)
                 # print("")
+            # Print loading progress
+            sys.stdout.write('\r')
+            sys.stdout.write("Loading... %d%%" % int(round((y / len(self.height_traversal)), 2) * 100) )
+            #print("Loading... ", int(round((y / len(self.height_traversal)), 2) * 100), "%")
+            sys.stdout.flush()
 
+        sys.stdout.write('\r')
+        sys.stdout.write("Loading... 100%")
+        sys.stdout.flush()
+        sys.stdout.write('\r')
+        time.sleep(0.5)
         # Return the final grid.
         return self.grid
 
