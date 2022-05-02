@@ -11,6 +11,8 @@ import numpy as np
 import csv
 import time
 import sys
+import math
+
 
 class PhotoToGrid:
     def __init__(self, file_path, grid_dimension_x, grid_dimension_y):
@@ -29,21 +31,29 @@ class PhotoToGrid:
         self.one_box_height = grid_dimension_y
 
         # Calculate output grid width and height dimensions.
-        self.grid_width = (round(self.input_width / self.one_box_width) * 2) + 1
-        self.grid_height = (round(self.input_height / self.one_box_height) * 2) + 1
+        self.grid_width = self.calculate_grid_width()
+        self.grid_height = self.calculate_grid_height()
 
         # Grid as array of arrays.
         self.grid = self.build_grid()
 
         # Width and Height traversal arrays for usage in image analysis.
-        self.width_traversal = self.create_traversal_array(self.input_width, self.one_box_width)
-        self.height_traversal = self.create_traversal_array(self.input_height, self.one_box_height)
+        self.width_traversal = self.create_traversal_array(self.input_width, "w")
+        self.height_traversal = self.create_traversal_array(self.input_height, "h")
 
         # Dictionary of images to reference shape comparisons.
         self.wall_images_dict = self.build_wall_dictionary()
 
         # Final grid.
         self.final_grid = self.build_final_grid()
+
+    def calculate_grid_width(self):
+        rounded = math.ceil(self.input_width / self.one_box_width)
+        return (rounded * 2) + 1
+
+    def calculate_grid_height(self):
+        rounded = math.ceil(self.input_height / self.one_box_height)
+        return (rounded * 2) + 1
 
     def build_grid(self):
         """
@@ -61,16 +71,20 @@ class PhotoToGrid:
 
         return grid
 
-    def create_traversal_array(self, input_dimension, box_dimension):
+    def create_traversal_array(self, input_dimension, dimension):
         """
         Creates an array to be used in image analysis.
         The array contains pixel increments to help mask the image into analyzable sections
         for each iteration of self.build_final_grid(),
         """
         traversal = []
-        section = round(input_dimension / box_dimension) * 2
+        section = 0
+        if dimension == "w":
+            section = self.grid_width - 1
+        if dimension == "h":
+            section = self.grid_height - 1
         for number in range(0, section - 1):
-            traversal.append(int((number * (1/section)) * input_dimension))
+            traversal.append(int((number * (1/section) * input_dimension)))
         return traversal
 
     def build_final_grid(self):
@@ -114,7 +128,7 @@ class PhotoToGrid:
                 # Uncomment the below line to view the image.
                 # cv.imshow('Reversed', processed_image_portion)
                 # cv.waitKey(0)
-
+                grid_value = 0
                 if wall_check_toggle == 1:
                     grid_value = self.check_wall(processed_image_portion)
 
@@ -130,8 +144,7 @@ class PhotoToGrid:
                 # print("")
             # Print loading progress
             sys.stdout.write('\r')
-            sys.stdout.write("Loading... %d%%" % int(round((y / len(self.height_traversal)), 2) * 100) )
-            #print("Loading... ", int(round((y / len(self.height_traversal)), 2) * 100), "%")
+            sys.stdout.write("Loading... %d%%" % int(round((y / len(self.height_traversal)), 2) * 100))
             sys.stdout.flush()
 
         sys.stdout.write('\r')
@@ -274,6 +287,7 @@ class PhotoToGrid:
             new_file.truncate()
 
 
+# if __name__ == '__main__':
 # Testing
 p2g = PhotoToGrid('input_image.jpg', 90, 90)
 p2g.write_txt()
