@@ -48,10 +48,16 @@ class PhotoToGrid:
         self.final_grid = self.build_final_grid()
 
     def calculate_grid_width(self):
+        """
+        Calculates appropriate number of grid space needed for width.
+        """
         rounded = math.ceil(self.input_width / self.one_box_width)
         return (rounded * 2) + 1
 
     def calculate_grid_height(self):
+        """
+        Calculates appropriate number of grid space needed for height.
+        """
         rounded = math.ceil(self.input_height / self.one_box_height)
         return (rounded * 2) + 1
 
