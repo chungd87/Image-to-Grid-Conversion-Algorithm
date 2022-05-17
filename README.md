@@ -1,6 +1,6 @@
 # Photo-to-Grid-Algorithm
  
-Takes input of a hand drawn or computer drawn image on graph paper, and converts it into a 2D array by using Computer Vision. Primarily designed to convert a drawn grid into a readable input format for usage in a playable dungeon in a video game.
+Takes input of a hand drawn or computer drawn image on graph paper, and converts it into a 2D array by using Computer Vision. Primarily designed to convert a drawn grid into a readable input format for usage as a playable dungeon in a video game.
 
 #### Author
 Danny Chung
