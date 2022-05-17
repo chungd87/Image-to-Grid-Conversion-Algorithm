@@ -1,8 +1,9 @@
 # Photo-to-Grid-Algorithm
-### Author
-Danny Chung
  
 Takes input of a hand drawn or computer drawn image on graph paper, and converts it into a 2D array by using Computer Vision. Primarily designed to convert a drawn grid into a readable input format used as a playable dungeon in a video game.
+
+### Author
+Danny Chung
 
 ## Technologies Used
 - Python 3.9
