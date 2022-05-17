@@ -25,6 +25,8 @@ Danny Chung
 
 ![output4](https://user-images.githubusercontent.com/67284108/168719306-ddc28fa9-de23-48f6-8bf3-a0eedfca0c17.jpg)
 
+![drawn_dungeon](https://user-images.githubusercontent.com/67284108/168723598-042b768d-57ea-473f-afec-7b21fa661b04.jpg)
+
 
 ## Example 2.
 #### Input
@@ -38,6 +40,8 @@ Danny Chung
 #### Output
 
 ![output1](https://user-images.githubusercontent.com/67284108/168719715-1a2ea88a-86a0-4ad2-8914-f0306c4788ce.jpg)
+
+![ideal_dungeon](https://user-images.githubusercontent.com/67284108/168723637-b3db17f2-8ab9-4843-b878-4029e78bc61c.jpg)
 
 
 ## Example 3.
@@ -53,6 +57,8 @@ Danny Chung
 
 ![output2](https://user-images.githubusercontent.com/67284108/168720581-62a29b2f-b90d-45e2-93f4-cd7a606a6f8c.jpg)
 
+![long_dungeon](https://user-images.githubusercontent.com/67284108/168723657-af116a57-6076-46f1-8f0c-e0e19f659e84.jpg)
+
 
 ## Example 4.
 #### Input
@@ -67,11 +73,5 @@ Danny Chung
 
 ![output3](https://user-images.githubusercontent.com/67284108/168722205-7ddaaeb3-e323-4548-b588-3f4d78bd0c1a.jpg)
 
-
-
-
-
-
-
-
+![large_dungeon](https://user-images.githubusercontent.com/67284108/168723672-c80c1740-9c0b-4b57-9bbc-7bfe1ed09ad6.jpg)
 
