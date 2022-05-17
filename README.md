@@ -73,4 +73,5 @@ Danny Chung
 
 ![output3](https://user-images.githubusercontent.com/67284108/168722205-7ddaaeb3-e323-4548-b588-3f4d78bd0c1a.jpg)
 
-![small_large_dungeon](https://user-images.githubusercontent.com/67284108/168723927-44c59127-27fe-49b3-a13d-ac2076c92e54.jpg)
+![small_large_dungeon](https://user-images.githubusercontent.com/67284108/168724117-754d0f19-3323-4ebb-b67d-4b4dce393b29.jpg)
+
