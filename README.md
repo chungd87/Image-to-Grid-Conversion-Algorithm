@@ -5,9 +5,11 @@ Takes input of a hand drawn or computer drawn image on graph paper, and converts
 #### Author
 Danny Chung
 
+
 ## Technologies Used
 - Python 3.9
 - OpenCV
+
 
 ## Sample Input, Processing, and Output
 ### 1.
