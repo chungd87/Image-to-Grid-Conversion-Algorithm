@@ -12,7 +12,7 @@ Danny Chung
 
 
 ## Sample Input, Processing, and Output
-### 1.
+## 1.
 #### Input
 
 ![test_draw](https://user-images.githubusercontent.com/67284108/168719223-fffb071b-07de-4aed-88e3-858586eeadda.jpg)
@@ -26,7 +26,7 @@ Danny Chung
 ![output4](https://user-images.githubusercontent.com/67284108/168719306-ddc28fa9-de23-48f6-8bf3-a0eedfca0c17.jpg)
 
 
-### 2.
+## 2.
 #### Input
 
 ![test_shapes-300x300](https://user-images.githubusercontent.com/67284108/168719676-4e906966-b6cd-473e-8b3b-bf0508a14f0a.jpg)
@@ -40,7 +40,7 @@ Danny Chung
 ![output1](https://user-images.githubusercontent.com/67284108/168719715-1a2ea88a-86a0-4ad2-8914-f0306c4788ce.jpg)
 
 
-### 3.
+## 3.
 #### Input
 
 
@@ -53,7 +53,7 @@ Danny Chung
 
 
 
-### 3.
+## 4.
 #### Input
 
 
