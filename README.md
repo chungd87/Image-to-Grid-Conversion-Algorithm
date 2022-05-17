@@ -13,14 +13,14 @@ Danny Chung
 
 ## Sample Input, Processing, and Output
 ### 1.
-Input
+### Input
 
 ![test_draw](https://user-images.githubusercontent.com/67284108/168719223-fffb071b-07de-4aed-88e3-858586eeadda.jpg)
 
-Processing
+### Processing
 
 ![handdrawn_grid](https://user-images.githubusercontent.com/67284108/168719295-1a41d03b-6f15-46f6-9821-a17c825a8201.gif)
 
-Output
+### Output
 
 ![output4](https://user-images.githubusercontent.com/67284108/168719306-ddc28fa9-de23-48f6-8bf3-a0eedfca0c17.jpg)
