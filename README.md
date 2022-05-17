@@ -11,8 +11,8 @@ Danny Chung
 - OpenCV
 
 
-## Sample Input, Processing, and Output
-## 1.
+## Example of Input, Processing, and Output
+## Example 1.
 #### Input
 
 ![test_draw](https://user-images.githubusercontent.com/67284108/168719223-fffb071b-07de-4aed-88e3-858586eeadda.jpg)
@@ -26,7 +26,7 @@ Danny Chung
 ![output4](https://user-images.githubusercontent.com/67284108/168719306-ddc28fa9-de23-48f6-8bf3-a0eedfca0c17.jpg)
 
 
-## 2.
+## Example 2.
 #### Input
 
 ![test_shapes-300x300](https://user-images.githubusercontent.com/67284108/168719676-4e906966-b6cd-473e-8b3b-bf0508a14f0a.jpg)
@@ -40,29 +40,32 @@ Danny Chung
 ![output1](https://user-images.githubusercontent.com/67284108/168719715-1a2ea88a-86a0-4ad2-8914-f0306c4788ce.jpg)
 
 
-## 3.
+## Example 3.
 #### Input
 
-
+![test_grid4-161x300](https://user-images.githubusercontent.com/67284108/168720530-37deb009-270d-4fcc-90e1-d2c1b2dd9d30.jpg)
 
 #### Processing
 
-
+![long_grid](https://user-images.githubusercontent.com/67284108/168720561-98bd7056-c079-4561-b69f-848d8887e16f.gif)
 
 #### Output
 
+![output2](https://user-images.githubusercontent.com/67284108/168720581-62a29b2f-b90d-45e2-93f4-cd7a606a6f8c.jpg)
 
 
-## 4.
+## Example 4.
 #### Input
 
-
+![test_grid_3-300x300](https://user-images.githubusercontent.com/67284108/168720638-db3c6b06-06d2-48a1-9e5c-115ad8a57264.jpg)
 
 #### Processing
 
-
+![large_grid](https://user-images.githubusercontent.com/67284108/168722147-c25a99d2-2cd9-4adf-94f9-bac9cdba0828.gif)
 
 #### Output
+
+![output3](https://user-images.githubusercontent.com/67284108/168722205-7ddaaeb3-e323-4548-b588-3f4d78bd0c1a.jpg)
 
 
 
