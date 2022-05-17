@@ -11,7 +11,7 @@ Danny Chung
 - OpenCV
 
 
-## Example of Input, Processing, and Output
+# Example of Input, Processing, and Output
 ## Example 1.
 #### Input
 
